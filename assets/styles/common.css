@@ -1,0 +1,33 @@
+/* Main */
+.brand-logo { margin-left: 0.4em; }
+
+@media only screen and (max-width: 768px)
+{
+  .brand-logo { margin-left: 0; }
+}
+
+/* Icons */
+.icon i { opacity: 0.5; }
+
+.form { width: 28rem; }
+
+#login_buttons tbody tr { border: none; }
+
+/* Favorites */
+.favorite_unpinned { opacity: 0.5; }
+.favorite_pinned   { opacity: 1.0; }
+
+/* Ajax loading indicator */
+.ajax_indicator {
+  display: none;
+  z-index: 9999;
+  width: 3.5em; height: 3.5em; max-height: 3.5em; padding-right: 1em; padding-top: 0.5em;
+  position: fixed; top: 90%; right: 2em;
+  border-radius: 3em;
+  background-color: white;
+}
+
+/* Temporary workaround */
+.preloader-wrapper { position: relative; left: 0.5em; }
+
+#overflow, .item   { user-select: none; }

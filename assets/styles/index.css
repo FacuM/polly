@@ -1,0 +1,2 @@
+/* Force everything to fit the 95% of the viewport height. */
+html, body, main, .valign-wrapper { height: 95%; }

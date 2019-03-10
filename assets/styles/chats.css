@@ -1,0 +1,32 @@
+html, body {
+  overflow: hidden;
+}
+
+/* Chats */
+.message_bubble {
+  padding-top: 1.5em !important;
+  padding-bottom: 1.5em !important;
+  border-radius: 1.3em;
+  margin-left: -1em !important;
+}
+
+/* Use as a shorthand override for ".message_bubble". */
+.message_bubble_other {
+  margin-left: 0.5em !important;
+}
+
+/* Chats: messages */
+#screen, #content   { height: 95%; }
+#messages           { max-height: 77vh !important; height: 99%; overflow-y: scroll; overflow-x: hidden; }
+#send_icon          { position: relative; top: 0.5em; font-size: 3em; }
+
+::-webkit-scrollbar { display: none; }
+#overflow           {
+  max-width: 3em; width: 3em; height: 3em; padding-top: 0.6em;
+  border-radius: 3em;
+  display: none;
+  position: absolute;
+  bottom: 7em;
+  left: 95%;
+  width: 100%;
+}
