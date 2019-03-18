@@ -47,9 +47,20 @@
  try {
   $server = new PDO('mysql:host=' . $server['hostname'] . ':' . $server['port'] . ';dbname=' . $server['database'] .';charset=utf8', $server['username'], $server['password']);
  } catch (PDOException $e) {
-  die('Database connection error.');
+  $secure = false; $css = 'index.css'; $title = 'Fatal exception';
+  require_once('includes/header.php');
+  echo '
+   <div class="row valign-wrapper">
+     <div class="col s12">
+       <h5 class="grey-text center-align">
+         <i class="large material-icons">link_off</i> <br>
+         Oops... We are unable to connect to the database. Would you like to <a href="">reload</a> and try again?</h5>
+     </div>
+   </div>';
+  require_once('includes/footer.php');
   $server = null;
   error_log($e->getMessage());
+  exit();
  }
 
  // Start or resume the session.
